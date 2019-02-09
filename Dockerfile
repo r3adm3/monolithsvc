@@ -15,4 +15,4 @@
  FROM microsoft/dotnet:2.1-aspnetcore-runtime
  WORKDIR /app
  COPY --from=builder /app .
- ENTRYPOINT ["dotnet", "monolithService.dll"]
+ ENTRYPOINT ["dotnet", "monolithsvc.dll"]
