@@ -17,6 +17,8 @@ namespace monolithsvc
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
+            var builder = new ConfigurationBuilder()
+                            .AddJsonFile("appsettings.json");            
         }
 
         public IConfiguration Configuration { get; }
