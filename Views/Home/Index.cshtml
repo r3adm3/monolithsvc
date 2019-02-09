@@ -26,9 +26,9 @@
         var aNumber = document.getElementById("a").value
         var bNumber = document.getElementById("b").value
 
-        if(op==='add'){var svcLink='https://localhost:5001/api/add?'}
-        if(op==='minus'){var svcLink='https://localhost:5001/api/minus?'}
-        if(op==='multiply'){var svcLink='https://localhost:5001/api/multiply?'}
+        if(op==='add'){var svcLink='api/add?'}
+        if(op==='minus'){var svcLink='api/minus?'}
+        if(op==='multiply'){var svcLink='api/multiply?'}
         
         var req = new XMLHttpRequest();
         req.open('GET', svcLink + 'a=' + aNumber + '&b=' +bNumber , true);
