@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace monolithsvc.Test
+namespace monolithsvc.Tests
 {
     [TestClass]
     public class UnitTest1
