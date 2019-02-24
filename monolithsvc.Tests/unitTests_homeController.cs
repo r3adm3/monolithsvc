@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 namespace monolithsvc.Tests
 {
     [TestClass]
-    public class unitTests_addController
+    public class unitTests_homeController
     {
         
         IConfiguration _configuration;
