@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace addService.Controllers
+namespace monolithsvc.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -12,9 +12,9 @@ namespace addService.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<string> Get(int a, int b)
+        public ActionResult<int> Get(int a, int b)
         {
-            return (a * b).ToString();
+            return (a * b);
         }
 
     }
