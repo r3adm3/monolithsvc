@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using monolithsvc.Models;
 
 namespace monolithsvc.Controllers
 {
@@ -14,7 +15,11 @@ namespace monolithsvc.Controllers
         [HttpGet]
         public ActionResult<int> Get(int a, int b)
         {
-            return (a - b);
+            sharedMath myObj = new sharedMath();
+
+            var result = myObj.minusTwoNumbers(a,b);
+
+            return result;
         }
 
     }
