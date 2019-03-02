@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.ApplicationInsights.AspNetCore;
 
 namespace monolithsvc
 {
@@ -33,7 +34,7 @@ namespace monolithsvc
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddApplicationInsightsTelemetry(Configuration);
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -52,7 +53,7 @@ namespace monolithsvc
 
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
