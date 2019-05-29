@@ -10,7 +10,7 @@ namespace monolithsvc.Tests
     public class unitTests_homeController
     {
         
-        IConfiguration _configuration;
+        public static IConfiguration _configuration;
 
         [TestMethod]
         public void HomeControllerCanInstantiate()
