@@ -23,8 +23,11 @@ docker build -t mysvc/monolith:v1 .
 
 To run a container of this image:
 
-```docker
+```docker (production)
 docker container run --name test_monolith -p 18080:80 mysvc/monolith:v1
 ```
 
+```docker (development)
+docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:80 mysvc/monolithsvc:20
+```
 Test should be able to be run using a browser, and going to http://localhost:18080
