@@ -13,13 +13,13 @@ namespace monolithsvc.Controllers
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<int> Get(int a, int b)
+        public ActionResult<sharedMath> Get(int a, int b)
         {
             sharedMath myObj = new sharedMath();
 
-            var result = myObj.addTwoNumbers(a,b);
+            myObj.mathresult = myObj.addTwoNumbers(a,b);
 
-            return result;
+            return myObj;
         }
 
     }

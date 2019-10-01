@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Net;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Reflection;
 using Microsoft.AspNetCore.Mvc;
 using monolithsvc.Models;
 using Microsoft.Extensions.Configuration; 
@@ -20,7 +22,10 @@ namespace monolithsvc.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.myFirstValue = _configuration["myFirstValue"];
+            ViewBag.internalVer = _configuration["internalVer"];
+            ViewBag.hostname = Environment.MachineName;
+            ViewBag.dotnetver = EnvironmentUtils.GetFrameworkDescription();
+
             return View();
         }
 

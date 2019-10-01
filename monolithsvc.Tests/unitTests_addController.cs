@@ -18,7 +18,7 @@ namespace monolithsvc.Tests
 
             var actualResult = result.Value;
 
-            Assert.AreEqual(3, actualResult);
+            Assert.AreEqual(3, actualResult.mathresult);
 
         }
 
