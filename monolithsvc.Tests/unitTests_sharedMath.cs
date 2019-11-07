@@ -35,7 +35,7 @@ namespace monolithsvc.Tests
             Assert.AreEqual(myTest, 3);
         }
 
-                [TestMethod]
+        [TestMethod]
         public void minusTwoNumbersReturnsExpectedResult()
         {
             //arrange
@@ -61,6 +61,16 @@ namespace monolithsvc.Tests
             //assert
             Assert.AreEqual(myTest, 2);
 
+        }
+
+        [TestMethod]
+        public void powerTwoNumbersReturnsExpectedResult()
+        {
+            sharedMath myObj = new sharedMath();
+
+            double myTest = myObj.powerTwoNumbers(2,3);
+
+            Assert.AreEqual(myTest, 8);
         }
     }
 }
