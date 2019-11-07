@@ -29,6 +29,11 @@ namespace monolithsvc.Models
                 return EnvironmentUtils.GetFrameworkDescription();
             }
         }
+
+        public double powerTwoNumbers(int a, int b)
+        {
+            return Math.Pow(2,3);
+        }
         public string hostname {get
             {
                 return Environment.MachineName;
