@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-//commit to force a change
+//commit to force a change (x2 4/2)
 namespace monolithsvc
 {
     public class Program
