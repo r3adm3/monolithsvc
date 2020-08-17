@@ -15,6 +15,7 @@ namespace monolithsvc
     {
         public static void Main(string[] args)
         {
+            //comments are cool man!
             CreateWebHostBuilder(args).Build().Run();
         }
 
