@@ -28,7 +28,7 @@ docker container run --name test_monolith -p 18080:80 mysvc/monolith:v1
 ```
 
 ```docker (development)
-docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:80 mysvc/monolithsvc:20
+docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:80 mysvc/monolithsvc:v1
 ```
 Test should be able to be run using a browser, and going to http://localhost:18080
 
@@ -42,5 +42,5 @@ Test should be able to be run using a browser, and going to http://localhost:180
 
 | release | environment | env | tested | Date
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| agnolotti-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | success | 2021-03-17
-| agnolotti-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac |  | cd
+| agnolotti | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | success | 2021-03-17
+| agnolotti | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | success | 2021-03-17
