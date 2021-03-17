@@ -1,17 +1,18 @@
-# Monolith Service 
-This service is a demonstration of moving from a monolithic code base to a more microservices based architecture. 
+# Monolith Service
 
-This is paired up with the repo: http://github.com/r3adm3/multiservice
+This service is a demonstration of moving from a monolithic code base to a more microservices based architecture.
+
+This is paired up with the repo: <http://github.com/r3adm3/multiservice>
 
 ## Compiling in Development
 
-Clone the repo. Ensure .Net 5.0 is installed. 
+Clone the repo. Ensure .Net 5.0 is installed.
 
 ```dotnetcore
 dotnet run
 ```
 
-Test should be able to be run using a browser, and going to http://localhost:5000
+Test should be able to be run using a browser, and going to <http://localhost:5000>
 
 ## Making a docker image
 
@@ -30,7 +31,8 @@ docker container run --name test_monolith -p 18080:80 mysvc/monolith:v1
 ```docker (development)
 docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:80 mysvc/monolithsvc:v1
 ```
-Test should be able to be run using a browser, and going to http://localhost:18080
+
+Test should be able to be run using a browser, and going to <http://localhost:18080>
 
 ## Status
 
