@@ -1,0 +1,21 @@
+ # Sample contents of Dockerfile (another test)
+ # Stage 1
+ FROM lin-nexus-001.local:8123/sdk:latest AS builder
+ WORKDIR /source
+
+ # caches restore result by copying csproj file separately
+ COPY *.csproj .
+ COPY nuget.config .
+ RUN dotnet nuget disable source nuget.org
+ RUN dotnet restore 
+
+ # copies the rest of your code
+ COPY . .
+ RUN find -type d -name bin -prune -exec rm -rf {} \; && find -type d -name obj -prune -exec rm -rf {} \;
+ RUN dotnet publish --output /app/ --configuration Release
+
+ # Stage 2
+ FROM lin-nexus-001.local:8123/aspnet:latest
+ WORKDIR /app
+ COPY --from=builder /app .
+ ENTRYPOINT ["dotnet", "monolithsvc.dll"]
