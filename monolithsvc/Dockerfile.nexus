@@ -1,12 +1,15 @@
  # Sample contents of Dockerfile (another test)
- # Stage 1
+ # Stage 1, image is locally tagged SDK
  FROM lin-nexus-001.local:8123/sdk:latest AS builder
  WORKDIR /source
 
  # caches restore result by copying csproj file separately
  COPY *.csproj .
- COPY nuget.config .
+ # changes here to change the repo source
+ COPY nuget.config.nexus ./nuget.config
  RUN dotnet nuget disable source nuget.org
+
+ # normalcy resumes
  RUN dotnet restore 
 
  # copies the rest of your code
