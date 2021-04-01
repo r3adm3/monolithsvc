@@ -12,9 +12,8 @@ pipeline {
 
     stage('monolithsvc docker build'){
       steps{
-        sh '''cd monolithsvc
-        docker login lin-nexus-001.local:8123 -u admin -p wawnab-wivkir-wapvA4
-        cp ../nuget.config.nexus ./
+        sh '''
+        cd monolithsvc
         docker build -f ./Dockerfile.nexus -t lin-nexus-001.local:8123/mono:latest .'''
         }
     }
