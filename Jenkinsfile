@@ -10,12 +10,6 @@ pipeline {
       }
     }
 
-    stage('monolithsvc test') {
-      steps {
-        sh 'dotnet test monolithsvc.Tests/'
-      }
-    }
-
     stage('monolithsvc docker build'){
       steps{
         sh '''cd monolithsvc 
