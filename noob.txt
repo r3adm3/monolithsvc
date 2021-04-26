@@ -1,0 +1,10 @@
+.
+..
+.git
+.gitignore
+Jenkinsfile
+Readme.md
+monolithsvc
+monolithsvc.Tests
+monolithsvc.sln
+noob.txt
