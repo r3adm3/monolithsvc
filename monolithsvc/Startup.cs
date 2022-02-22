@@ -36,7 +36,7 @@ namespace monolithsvc
             });
 
             services.AddApplicationInsightsTelemetry(Configuration);
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddMvc(options => options.EnableEndpointRouting = false);
         
         }
