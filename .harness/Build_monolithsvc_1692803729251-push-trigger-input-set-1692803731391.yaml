@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_monolithsvc_1692803729251-push-trigger-input-set
+  identifier: Build_monolithsvc_1692803729251pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_monolithsvc_1692803729251
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
