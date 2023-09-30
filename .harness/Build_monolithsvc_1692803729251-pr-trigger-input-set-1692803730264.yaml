@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_monolithsvc_1692803729251-pr-trigger-input-set
+  identifier: Build_monolithsvc_1692803729251prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_monolithsvc_1692803729251
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
