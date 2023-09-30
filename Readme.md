@@ -6,7 +6,7 @@ This is paired up with the repo: <http://github.com/r3adm3/multiservice>
 
 ## Compiling in Development
 
-Clone the repo. Ensure .Net 7.0 is installed.
+Clone the repo. Ensure .Net 8.0 is installed.
 
 ```dotnetcore
 dotnet run
@@ -46,16 +46,17 @@ Current Version
 
 | release | environment | env | tested | Date
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win |  | untested
-| Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac |  | untested
+| halloumi-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | 2023-10-xx | developing
+| halloumi-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | 2023-10-xx | developing
 
 Previous Versions
 
 | release | environment | env | tested | Date
 | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | 2023-09-30 | success
+| Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | 2023-09-30 | success
 | Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | success | 
 | Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | success | 2021-03-17
-| agnolotti | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | success | 2021-03-17
-| agnolotti | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | success | 2021-03-17
 
-*jarlsberg-dev*
+
+*halloumi-dev*
