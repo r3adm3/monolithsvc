@@ -6,7 +6,7 @@ This is paired up with the repo: <http://github.com/r3adm3/multiservice>
 
 ## Compiling in Development
 
-Clone the repo. Ensure .Net 6.0 is installed.
+Clone the repo. Ensure .Net 7.0 is installed.
 
 ```dotnetcore
 dotnet run
@@ -46,14 +46,16 @@ Current Version
 
 | release | environment | env | tested | Date
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win |  | 
-| Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | success | 2021-03-17
+| Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win |  | untested
+| Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac |  | untested
 
-Previous Version
+Previous Versions
 
 | release | environment | env | tested | Date
 | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | success | 
+| Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | success | 2021-03-17
 | agnolotti | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | success | 2021-03-17
 | agnolotti | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | success | 2021-03-17
 
-*Infossato-dev*
+*jarlsberg-dev*
