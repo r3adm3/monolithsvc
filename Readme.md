@@ -80,4 +80,4 @@ Previous Versions
 | Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | success | 2021-03-17
 
 
-*halloumi-dev*
+*halloumi*
