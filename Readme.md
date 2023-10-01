@@ -14,6 +14,22 @@ dotnet run
 
 Test should be able to be run using a browser, and going to <http://localhost:5000>
 
+## Testing the code
+
+Running the Unit Tests
+
+```dotnetcore
+cd monolithsvc.PlaywrightTests
+dotnet test
+```
+
+Running the Playwright Tests
+
+
+```dotnetcore
+cd monolithsvc.Tests
+dotnet test
+```
 ## Making a docker image
 
 Included in the project is a Dockerfile which will create a docker image artifact, change into the source code directory and type:
@@ -32,7 +48,7 @@ docker container run --name test_monolith -p 18080:80 mysvc/monolith:v1
 docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:80 mysvc/monolithsvc:v1
 ```
 
-Test should be able to be run using a browser, and going to <http://localhost:18080>
+Test should be able to be run using a browser, and going to <http://localhost:18080> if you want to hit the container website
 
 ## Status
 
