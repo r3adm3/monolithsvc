@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <config>
+  </config>
+  <packageSources>
+    <add key="lin-nexus-001" value="http://192.168.1.232:8081/repository/nuget.org-proxy/index.json" />
+  </packageSources>
+  <packageSourceCredentials>
+    <lin-nexus-001>
+      <add key="Username" value="testuser" />
+      <add key="ClearTextPassword" value="mysecretpassword" />
+    </lin-nexus-001>
+  </packageSourceCredentials>
+</configuration>
