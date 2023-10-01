@@ -62,13 +62,18 @@ Current Version
 
 | release | environment | env | tested | Date
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| halloumi-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | 2023-10-xx | developing
-| halloumi-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | 2023-10-xx | developing
+| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - win | 2023-10-01 | testing
+| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - mac | 2023-10-01 | testing
 
 Previous Versions
 
 | release | environment | env | tested | Date
 | ----------- | ----------- | ----------- | ----------- | ----------- |
+| halloumi-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi-dev | docker toolbox - win | 2023-10-xx | fail *
+| halloumi-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi-dev | docker desktop - win | 2023-10-01 | success
+| halloumi-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi-dev | docker desktop - mac | 2023-10-01 | success
+| Jarlsberg | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | 2023-09-30 | success
+| Jarlsberg | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | 2023-09-30 | success
 | Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | 2023-09-30 | success
 | Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | 2023-09-30 | success
 | Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | success | 
