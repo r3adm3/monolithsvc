@@ -27,7 +27,7 @@ namespace monolithsvc.Models
             return String.Join(' ', productName, " ", GetNetCoreVersion());
         }
 
-        public static string GetNetCoreVersion()
+        public static string? GetNetCoreVersion()
         {
             var assembly = typeof(System.Runtime.GCSettings).GetTypeInfo().Assembly;
             var assemblyPath2 = assembly.Location.Split(new[] { '/', '\\' }, StringSplitOptions.RemoveEmptyEntries);

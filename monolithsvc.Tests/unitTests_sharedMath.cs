@@ -72,5 +72,5 @@ namespace monolithsvc.Tests
 
             Assert.AreEqual(myTest, 8);
         }
-    }
+    } 
 }

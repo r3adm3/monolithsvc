@@ -4,6 +4,7 @@ project.lock.json
 .DS_Store
 *.pyc
 nupkg/
+monolithsvc-v7*
 
 # Visual Studio Code
 .vscode

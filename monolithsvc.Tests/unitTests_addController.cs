@@ -17,10 +17,13 @@ namespace monolithsvc.Tests
             var result = controller.Get(2,1);
 
             var actualResult = result.Value;
-
-            Assert.AreEqual(3, actualResult.mathresult);
+            if (actualResult != null){
+                Assert.AreEqual(3, actualResult.mathresult);
+            } else {
+                Assert.Fail();
+            }
 
         }
-
+        
     }
 }

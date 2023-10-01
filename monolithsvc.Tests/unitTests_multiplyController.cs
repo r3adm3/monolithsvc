@@ -18,7 +18,11 @@ namespace monolithsvc.Tests
 
             var actualResult = result.Value;
 
-            Assert.AreEqual(2, actualResult.mathresult);
+             if (actualResult != null){
+                Assert.AreEqual(2, actualResult.mathresult);
+            } else {
+                Assert.Fail();
+            }
 
         }
 

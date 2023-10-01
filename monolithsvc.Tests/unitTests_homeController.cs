@@ -10,14 +10,26 @@ namespace monolithsvc.Tests
     public class unitTests_homeController
     {
         
-        public static IConfiguration _configuration;
+        public static IConfiguration? _configuration;
 
         [TestMethod]
-        public void HomeControllerCanInstantiate()
+        public void HomeControllerCanInstantiateIndex()
         {
-            var controller = new HomeController(_configuration);
+            
+            var controller = new HomeController();
 
-            var result = controller.About();
+            var result = controller.Index();
+
+            Assert.IsNotNull(result);
+
+        }
+
+                [TestMethod]
+        public void HomeControllerCanInstantiatePrivacy()
+        {
+            var controller = new HomeController();
+
+            var result = controller.Privacy();
 
             Assert.IsNotNull(result);
 
