@@ -60,14 +60,14 @@ Test should be able to be run using a browser, and going to <http://localhost:18
 
 Current Version
 
-| release | environment | env | tested | Date
+| release | environment | env | Date | status
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - win | 2023-10-01 | testing
 | halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - mac | 2023-10-01 | testing
 
 Previous Versions
 
-| release | environment | env | tested | Date
+| release | environment | env | Date | status
 | ----------- | ----------- | ----------- | ----------- | ----------- |
 | halloumi-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi-dev | docker toolbox - win | 2023-10-xx | fail *
 | halloumi-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi-dev | docker desktop - win | 2023-10-01 | success
@@ -76,8 +76,9 @@ Previous Versions
 | Jarlsberg | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | 2023-09-30 | success
 | Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | 2023-09-30 | success
 | Jarlsberg-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | 2023-09-30 | success
-| Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | success | 
-| Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | success | 2021-03-17
+| Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker toolbox - win | | success | 
+| Infossato-dev | docker container run --name test_monolith -p 18080:80 monolithsvc | docker desktop - mac | 2021-03-17 | success
 
+* Note - Docker Toolbox now errors with the container built using .NET, had to upgrade to Docker Desktop on Windows
 
 *halloumi*
