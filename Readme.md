@@ -62,8 +62,8 @@ Current Version
 
 | release | environment | env | Date | status
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - win | 2023-10-01 | testing
-| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - mac | 2023-10-01 | testing
+| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - win | 2023-10-02 | success
+| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - mac | 2023-10-02 | success
 
 Previous Versions
 
