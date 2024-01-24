@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_r3adm3_monolithsvc_1706107082261-push-trigger-input-set
+  identifier: Build_r3adm3_monolithsvc_1706107082261pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: TestProj
+  pipeline:
+    identifier: Build_r3adm3_monolithsvc_1706107082261
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
