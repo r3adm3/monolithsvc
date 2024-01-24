@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_r3adm3_monolithsvc_1706107082261-pr-trigger-input-set
+  identifier: Build_r3adm3_monolithsvc_1706107082261prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: TestProj
+  pipeline:
+    identifier: Build_r3adm3_monolithsvc_1706107082261
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
