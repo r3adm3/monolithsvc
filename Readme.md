@@ -6,7 +6,7 @@ This is paired up with the repo: <http://github.com/r3adm3/multiservice>
 
 ## Compiling in Development
 
-Clone the repo. Ensure .Net 8.0 is installed.
+Clone the repo. Ensure .Net 9.0 is installed.
 
 ```dotnetcore
 dotnet run
@@ -45,7 +45,7 @@ docker container run --name test_monolith -p 18080:8080 mysvc/monolith:v1
 ```
 
 ```docker (development)
-docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:8080 mysvc/monolithsvc:v1
+docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:8080 mysvc/monolithsvc:<version>
 ```
 
 Test should be able to be run using a browser, and going to <http://localhost:18080> if you want to hit the container website
@@ -62,13 +62,14 @@ Current Version
 
 | release | environment | env | Date | status
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - win | 2023-10-02 | success
-| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - mac | 2023-10-02 | success
+| kashkaval-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:kashkaval-dev | docker desktop - mac | 2024-08-28 | testing
 
 Previous Versions
 
 | release | environment | env | Date | status
 | ----------- | ----------- | ----------- | ----------- | ----------- |
+| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - win | 2023-10-02 | success
+| halloumi | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi | docker desktop - mac | 2023-10-02 | success
 | halloumi-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi-dev | docker toolbox - win | 2023-10-xx | fail *
 | halloumi-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi-dev | docker desktop - win | 2023-10-01 | success
 | halloumi-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:halloumi-dev | docker desktop - mac | 2023-10-01 | success

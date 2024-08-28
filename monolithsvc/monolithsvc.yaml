@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations: {}
+  name: monolithsvc-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: monolithsvc
+  template:
+    metadata:
+      labels:
+        app: monolithsvc
+    spec:
+      containers:
+      - env:
+        image: daed.duckdns.org:50000/monolithsvc:kashkaval-dev
+        name: monolithsvc
+        ports:
+        - containerPort: 8080
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: monolithsvc
+  name: monolithsvc
+  namespace: default
+spec:
+  ports:
+  - nodePort: 30881
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: monolithsvc
+  type: NodePort
