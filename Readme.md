@@ -45,7 +45,7 @@ docker container run --name test_monolith -p 18080:8080 mysvc/monolith:v1
 ```
 
 ```docker (development)
-docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:8080 mysvc/monolithsvc:v1
+docker container run -e ASPNETCORE_ENVIRONMENT='Development' --rm --name test_monolith -p 18080:8080 mysvc/monolithsvc:<version>
 ```
 
 Test should be able to be run using a browser, and going to <http://localhost:18080> if you want to hit the container website
