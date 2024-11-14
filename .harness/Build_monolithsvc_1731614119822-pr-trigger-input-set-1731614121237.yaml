@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_monolithsvc_1731614119822-pr-trigger-input-set
+  identifier: Build_monolithsvc_1731614119822prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: Doodad
+  pipeline:
+    identifier: Build_monolithsvc_1731614119822
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
