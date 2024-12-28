@@ -32,7 +32,7 @@ namespace monolithsvc.Tests
             int myTest = SharedMath.AddTwoNumbers(1,2);
 
             //assert
-            Assert.AreEqual(myTest, 3);
+            Assert.AreEqual(3, myTest);
         }
 
         [TestMethod]
@@ -45,7 +45,7 @@ namespace monolithsvc.Tests
             int myTest = SharedMath.MinusTwoNumbers(2,1);
 
             //assert
-            Assert.AreEqual(myTest, 1);
+            Assert.AreEqual(1, myTest);
 
         }
 
@@ -59,7 +59,7 @@ namespace monolithsvc.Tests
             int myTest = SharedMath.MultiplyTwoNumbers(2,1);
 
             //assert
-            Assert.AreEqual(myTest, 2);
+            Assert.AreEqual(2, myTest);
 
         }
 
@@ -70,7 +70,7 @@ namespace monolithsvc.Tests
 
             double myTest = SharedMath.PowerTwoNumbers(2,3);
 
-            Assert.AreEqual(myTest, 8);
+            Assert.AreEqual(8, myTest);
         }
     } 
 }
