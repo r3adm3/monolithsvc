@@ -18,9 +18,12 @@ spec:
       - env:
         image: daed.duckdns.org:50000/monolithsvc:kashkaval-dev
         name: monolithsvc
+        resources:
+          limits:
+            memory: 200Mi
         ports:
         - containerPort: 8080
-
+      automountServiceAccountToken: false
 ---
 apiVersion: v1
 kind: Service
