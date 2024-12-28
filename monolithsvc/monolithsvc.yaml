@@ -19,10 +19,18 @@ spec:
         image: daed.duckdns.org:50000/monolithsvc:kashkaval-dev
         name: monolithsvc
         resources:
+          requests:
+            cpu: 0.5
+            ephemeral-storage: "10Mi"           
           limits:
             memory: 200Mi
         ports:
         - containerPort: 8080
+      securityContext:
+        allowPrivilegeEscalation: "false"
+        runAsNonRoot: "true"
+        capabilities:
+          drop: "ALL"
       automountServiceAccountToken: false
 ---
 apiVersion: v1
