@@ -15,9 +15,10 @@ namespace monolithsvc.Controllers
         [HttpGet]
         public ActionResult<SharedMath> Get(int a, int b)
         {
-            SharedMath myObj = new SharedMath();
-
-            myObj.Mathresult = myObj.AddTwoNumbers(a,b);
+            SharedMath myObj = new()
+            {
+                Mathresult = SharedMath.AddTwoNumbers(a, b)
+            };
 
             return myObj;
         }

@@ -12,7 +12,7 @@ namespace monolithsvc.Tests
         [TestMethod]
         public void addControllerTwoTakeAwayOneEqualsOne()
         {
-            var controller = new minusController();
+            var controller = new MinusController();
 
             var result = controller.Get(2,1);
 

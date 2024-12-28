@@ -26,10 +26,10 @@ namespace monolithsvc.Tests
         public void addingTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            SharedMath myObj = new SharedMath();
+            SharedMath myObj = new();
  
             //act
-            int myTest = myObj.AddTwoNumbers(1,2);
+            int myTest = SharedMath.AddTwoNumbers(1,2);
 
             //assert
             Assert.AreEqual(myTest, 3);
@@ -39,10 +39,10 @@ namespace monolithsvc.Tests
         public void MinusTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            SharedMath myObj = new SharedMath();
+            SharedMath myObj = new();
  
             //act
-            int myTest = myObj.MinusTwoNumbers(2,1);
+            int myTest = SharedMath.MinusTwoNumbers(2,1);
 
             //assert
             Assert.AreEqual(myTest, 1);
@@ -53,10 +53,10 @@ namespace monolithsvc.Tests
         public void MultiplyTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            SharedMath myObj = new SharedMath();
+            SharedMath myObj = new();
  
             //act
-            int myTest = myObj.MultiplyTwoNumbers(2,1);
+            int myTest = SharedMath.MultiplyTwoNumbers(2,1);
 
             //assert
             Assert.AreEqual(myTest, 2);
@@ -66,9 +66,9 @@ namespace monolithsvc.Tests
         [TestMethod]
         public void PowerTwoNumbersReturnsExpectedResult()
         {
-            SharedMath myObj = new SharedMath();
+            SharedMath myObj = new();
 
-            double myTest = myObj.PowerTwoNumbers(2,3);
+            double myTest = SharedMath.PowerTwoNumbers(2,3);
 
             Assert.AreEqual(myTest, 8);
         }

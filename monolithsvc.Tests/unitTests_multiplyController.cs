@@ -12,7 +12,7 @@ namespace monolithsvc.Tests
         [TestMethod]
         public void multiplyControllerTwoMultiplyOneEqualsTwo()
         {
-            var controller = new multiplyController();
+            var controller = new MultiplyController();
 
             var result = controller.Get(2,1);
 
