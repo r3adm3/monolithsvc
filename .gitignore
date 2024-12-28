@@ -5,6 +5,7 @@ project.lock.json
 *.pyc
 nupkg/
 monolithsvc-v7*
+note.txt
 
 # Visual Studio Code
 .vscode

@@ -14,6 +14,8 @@
 
  # Stage 2
  FROM mcr.microsoft.com/dotnet/nightly/aspnet:9.0
+ RUN adduser non-root-user
  WORKDIR /app
  COPY --from=builder /app .
+ USER non-root-user
  ENTRYPOINT ["dotnet", "monolithsvc.dll"]

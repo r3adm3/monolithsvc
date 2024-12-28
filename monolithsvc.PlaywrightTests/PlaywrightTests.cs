@@ -1,7 +1,7 @@
 namespace monolithsvc.PlaywrightTests;
 
 [TestClass]
-public class UnitTest1 : PageTest
+public class PlaywrightTests : PageTest
 {
     [TestMethod]
     public async Task HomepageHasPlaywrightInTitleAndGetStartedLinkLinkingtoTheIntroPage()
@@ -23,4 +23,6 @@ public class UnitTest1 : PageTest
         // Expects the URL to contain intro.
         await Expect(Page).ToHaveURLAsync(new Regex(".*intro"));
     }
+
+
 }
