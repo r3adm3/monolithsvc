@@ -9,7 +9,7 @@ public class PlaywrightTests : PageTest
         await Page.GotoAsync("https://playwright.dev");
 
         // Expect a title "to contain" a substring.
-        await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
+        await Expect(Page).ToHaveTitleAsync("Fast and reliable end-to-end testing for modern web apps | Playwright");
 
         // create a locator
         var getStarted = Page.Locator("text=Get Started");
