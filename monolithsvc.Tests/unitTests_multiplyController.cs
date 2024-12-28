@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 namespace monolithsvc.Tests
 {
     [TestClass]
-    public class unitTests_multiplyController
+    public class UnitTests_multiplyController
     {
         [TestMethod]
         public void multiplyControllerTwoMultiplyOneEqualsTwo()
@@ -19,7 +19,7 @@ namespace monolithsvc.Tests
             var actualResult = result.Value;
 
              if (actualResult != null){
-                Assert.AreEqual(2, actualResult.mathresult);
+                Assert.AreEqual(2, actualResult.Mathresult);
             } else {
                 Assert.Fail();
             }

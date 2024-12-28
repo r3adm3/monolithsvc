@@ -4,7 +4,7 @@ using monolithsvc.Models;
 namespace monolithsvc.Tests
 {
     [TestClass]
-    public class unitTests_SharedMaths
+    public class UnitTests_SharedMaths
     {
         //shared arrange 
 
@@ -12,7 +12,7 @@ namespace monolithsvc.Tests
         public void CanInstantiateSharedMaths()
         {
             //arrange
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new SharedMath();
  
             //act
           
@@ -26,23 +26,23 @@ namespace monolithsvc.Tests
         public void addingTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new SharedMath();
  
             //act
-            int myTest = myObj.addTwoNumbers(1,2);
+            int myTest = myObj.AddTwoNumbers(1,2);
 
             //assert
             Assert.AreEqual(myTest, 3);
         }
 
         [TestMethod]
-        public void minusTwoNumbersReturnsExpectedResult()
+        public void MinusTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new SharedMath();
  
             //act
-            int myTest = myObj.minusTwoNumbers(2,1);
+            int myTest = myObj.MinusTwoNumbers(2,1);
 
             //assert
             Assert.AreEqual(myTest, 1);
@@ -50,13 +50,13 @@ namespace monolithsvc.Tests
         }
 
         [TestMethod]
-        public void multiplyTwoNumbersReturnsExpectedResult()
+        public void MultiplyTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new SharedMath();
  
             //act
-            int myTest = myObj.multiplyTwoNumbers(2,1);
+            int myTest = myObj.MultiplyTwoNumbers(2,1);
 
             //assert
             Assert.AreEqual(myTest, 2);
@@ -64,11 +64,11 @@ namespace monolithsvc.Tests
         }
 
         [TestMethod]
-        public void powerTwoNumbersReturnsExpectedResult()
+        public void PowerTwoNumbersReturnsExpectedResult()
         {
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new SharedMath();
 
-            double myTest = myObj.powerTwoNumbers(2,3);
+            double myTest = myObj.PowerTwoNumbers(2,3);
 
             Assert.AreEqual(myTest, 8);
         }
