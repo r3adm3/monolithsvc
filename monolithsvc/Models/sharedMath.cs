@@ -31,10 +31,8 @@ namespace monolithsvc.Models
             return Math.Pow(2,3);
         }
 
-        public static string Hostname() 
-        {
-                return Environment.MachineName;
-        }
+        public string Hostname{get;} =  Environment.MachineName;
+
 
     }
 
