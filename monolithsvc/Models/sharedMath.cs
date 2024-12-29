@@ -24,7 +24,9 @@ namespace monolithsvc.Models
         }
 
         public int Mathresult {get;set;}
-        public static string Dotnetver {get
+        public string Dotnetver
+        {
+            get
             {
                 return EnvironmentUtils.GetFrameworkDescription();
             }
@@ -34,7 +36,8 @@ namespace monolithsvc.Models
         {
             return Math.Pow(2,3);
         }
-        public static string Hostname {get
+
+        public string Hostname {get
             {
                 return Environment.MachineName;
             }
