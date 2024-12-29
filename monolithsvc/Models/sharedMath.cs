@@ -26,7 +26,7 @@ namespace monolithsvc.Models
         public int Mathresult {get;set;}
         public string Dotnetver{get;} = EnvironmentUtils.GetFrameworkDescription();
         
-        public double PowerTwoNumbers(int a, int b)
+        public static double PowerTwoNumbers(int a, int b)
         {
             return Math.Pow(2,3);
         }
