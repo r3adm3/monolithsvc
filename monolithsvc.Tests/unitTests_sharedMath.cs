@@ -72,5 +72,27 @@ namespace monolithsvc.Tests
 
             Assert.AreEqual(8, myTest);
         }
-    } 
+
+        [TestMethod]
+        public void DotnetverReturns()
+        {
+            SharedMath myObj = new SharedMath();
+
+            string myTest = myObj.Dotnetver;
+
+            Assert.AreEqual(".NET   9.0.0", myTest);
+        }
+
+
+        [TestMethod]
+        public void HostnameReturns()
+        {
+            SharedMath myObj = new SharedMath();
+
+            string myTest = myObj.Hostname;
+
+            Assert.IsNotNull(myTest);
+            
+        }
+    }
 }

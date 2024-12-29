@@ -24,23 +24,16 @@ namespace monolithsvc.Models
         }
 
         public int Mathresult {get;set;}
-        public string Dotnetver
-        {
-            get
-            {
-                return EnvironmentUtils.GetFrameworkDescription();
-            }
-        }
-
-        public static double PowerTwoNumbers(int a, int b)
+        public string Dotnetver{get;} = EnvironmentUtils.GetFrameworkDescription();
+        
+        public double PowerTwoNumbers(int a, int b)
         {
             return Math.Pow(2,3);
         }
 
-        public string Hostname {get
-            {
+        public static string Hostname() 
+        {
                 return Environment.MachineName;
-            }
         }
 
     }
