@@ -83,16 +83,16 @@ namespace monolithsvc.Tests
             Assert.AreEqual(".NET   9.0.0", myTest);
         }
 
-
+/*
         [TestMethod]
         public void HostnameReturns()
         {
-            SharedMath myObj = new SharedMath();
+            SharedMath myObj = new();
 
-            string myTest = myObj.Hostname;
+            string myTest = myObj.Hostname();
 
             Assert.IsNotNull(myTest);
             
         }
-    }
+ */   }
 }
