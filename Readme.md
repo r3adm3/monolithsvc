@@ -62,7 +62,7 @@ Current Version
 
 | release | environment | env | Date | status
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| kashkaval-dev | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:kashkaval-dev | docker desktop - mac | 2024-08-28 | testing
+| kashkaval | docker container run --name test_monolith -p 18080:8080 daed.duckdns.org:50000/monolithsvc:kashkaval | docker desktop - mac | 2024-08-28 | testing
 
 Previous Versions
 
@@ -82,5 +82,5 @@ Previous Versions
 
 * Note - Docker Toolbox now errors with the container built using .NET, had to upgrade to Docker Desktop on Windows
 
-*halloumi*
+*kashkaval*
 

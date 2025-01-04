@@ -9,15 +9,16 @@ namespace monolithsvc.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class addController : ControllerBase
+    public class AddController : ControllerBase
     {
         // GET api/values
         [HttpGet]
-        public ActionResult<sharedMath> Get(int a, int b)
+        public ActionResult<SharedMath> Get(int a, int b)
         {
-            sharedMath myObj = new sharedMath();
-
-            myObj.mathresult = myObj.addTwoNumbers(a,b);
+            SharedMath myObj = new()
+            {
+                Mathresult = SharedMath.AddTwoNumbers(a, b)
+            };
 
             return myObj;
         }

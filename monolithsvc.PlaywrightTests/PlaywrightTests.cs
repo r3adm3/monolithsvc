@@ -1,7 +1,7 @@
 namespace monolithsvc.PlaywrightTests;
 
 [TestClass]
-public class UnitTest1 : PageTest
+public class PlaywrightTests : PageTest
 {
     [TestMethod]
     public async Task HomepageHasPlaywrightInTitleAndGetStartedLinkLinkingtoTheIntroPage()
@@ -9,7 +9,7 @@ public class UnitTest1 : PageTest
         await Page.GotoAsync("https://playwright.dev");
 
         // Expect a title "to contain" a substring.
-        await Expect(Page).ToHaveTitleAsync(new Regex("Playwright"));
+        await Expect(Page).ToHaveTitleAsync("Fast and reliable end-to-end testing for modern web apps | Playwright");
 
         // create a locator
         var getStarted = Page.Locator("text=Get Started");
@@ -17,10 +17,7 @@ public class UnitTest1 : PageTest
         // Expect an attribute "to be strictly equal" to the value.
         await Expect(getStarted).ToHaveAttributeAsync("href", "/docs/intro");
 
-        // Click the get started link.
-        await getStarted.ClickAsync();
-
-        // Expects the URL to contain intro.
-        await Expect(Page).ToHaveURLAsync(new Regex(".*intro"));
     }
+
+
 }

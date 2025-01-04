@@ -4,7 +4,7 @@ using monolithsvc.Models;
 namespace monolithsvc.Tests
 {
     [TestClass]
-    public class unitTests_SharedMaths
+    public class UnitTests_SharedMaths
     {
         //shared arrange 
 
@@ -12,7 +12,7 @@ namespace monolithsvc.Tests
         public void CanInstantiateSharedMaths()
         {
             //arrange
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new SharedMath();
  
             //act
           
@@ -26,51 +26,73 @@ namespace monolithsvc.Tests
         public void addingTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new();
  
             //act
-            int myTest = myObj.addTwoNumbers(1,2);
+            int myTest = SharedMath.AddTwoNumbers(1,2);
 
             //assert
-            Assert.AreEqual(myTest, 3);
+            Assert.AreEqual(3, myTest);
         }
 
         [TestMethod]
-        public void minusTwoNumbersReturnsExpectedResult()
+        public void MinusTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new();
  
             //act
-            int myTest = myObj.minusTwoNumbers(2,1);
+            int myTest = SharedMath.MinusTwoNumbers(2,1);
 
             //assert
-            Assert.AreEqual(myTest, 1);
+            Assert.AreEqual(1, myTest);
 
         }
 
         [TestMethod]
-        public void multiplyTwoNumbersReturnsExpectedResult()
+        public void MultiplyTwoNumbersReturnsExpectedResult()
         {
             //arrange
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new();
  
             //act
-            int myTest = myObj.multiplyTwoNumbers(2,1);
+            int myTest = SharedMath.MultiplyTwoNumbers(2,1);
 
             //assert
-            Assert.AreEqual(myTest, 2);
+            Assert.AreEqual(2, myTest);
 
         }
 
         [TestMethod]
-        public void powerTwoNumbersReturnsExpectedResult()
+        public void PowerTwoNumbersReturnsExpectedResult()
         {
-            sharedMath myObj = new sharedMath();
+            SharedMath myObj = new();
 
-            double myTest = myObj.powerTwoNumbers(2,3);
+            double myTest = SharedMath.PowerTwoNumbers(2,3);
 
-            Assert.AreEqual(myTest, 8);
+            Assert.AreEqual(8, myTest);
         }
-    } 
+
+        [TestMethod]
+        public void DotnetverReturns()
+        {
+            SharedMath myObj = new SharedMath();
+
+            string myTest = myObj.Dotnetver;
+
+            Assert.AreEqual(".NET   9.0.0", myTest);
+        }
+
+
+        [TestMethod]
+        public void HostnameReturns()
+        {
+            SharedMath myObj = new();
+
+            string myTest = myObj.Hostname;
+
+            Assert.IsNotNull(myTest);
+            
+        }
+    }
 }

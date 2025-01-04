@@ -7,18 +7,18 @@ using Microsoft.Extensions.Configuration;
 namespace monolithsvc.Tests
 {
     [TestClass]
-    public class unitTests_addController
+    public class UnitTests_addController
     {
         [TestMethod]
-        public void addControllerTwoPlusOneEqualsThree()
+        public void AddControllerTwoPlusOneEqualsThree()
         {
-            var controller = new addController();
+            var controller = new AddController();
 
             var result = controller.Get(2,1);
 
             var actualResult = result.Value;
             if (actualResult != null){
-                Assert.AreEqual(3, actualResult.mathresult);
+                Assert.AreEqual(3, actualResult.Mathresult);
             } else {
                 Assert.Fail();
             }
