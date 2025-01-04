@@ -27,4 +27,4 @@ stages:
         repository: 'monolithsvc'
         command: 'buildAndPush'
         Dockerfile: '**/Dockerfile'
-        tags: 'kashkaval-dev'
+        tags: 'kashkaval'

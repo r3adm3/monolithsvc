@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - env:
-        image: daed.duckdns.org:50000/monolithsvc:kashkaval-dev
+        image: daed.duckdns.org:50000/monolithsvc:kashkaval
         name: monolithsvc
         resources:
           requests:
