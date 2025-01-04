@@ -17,6 +17,7 @@ spec:
       containers:
       - env:
         image: daed.duckdns.org:50000/monolithsvc:kashkaval
+        imagePullPolicy: Always
         name: monolithsvc
         resources:
           requests:
