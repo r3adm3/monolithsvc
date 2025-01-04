@@ -28,10 +28,7 @@ spec:
         ports:
         - containerPort: 8080
       securityContext:
-        allowPrivilegeEscalation: "false"
-        runAsNonRoot: "true"
-        capabilities:
-          drop: "ALL"
+        runAsNonRoot: true
       automountServiceAccountToken: false
 ---
 apiVersion: v1

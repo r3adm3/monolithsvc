@@ -16,9 +16,11 @@
  FROM mcr.microsoft.com/dotnet/aspnet:9.0
  RUN apt-get update
 
- RUN adduser non-root-user
+# Create a group and user so we are not running our container and application as root and thus user 0 which is a security issue.
+RUN addgroup --system --gid 1000 customgroup \
+    && adduser --system --uid 1000 --ingroup customgroup --shell /bin/sh customuser
  
- USER non-root-user
+ USER 1000
  
  WORKDIR /app
  COPY --from=builder /app .
