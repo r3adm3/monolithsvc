@@ -34,7 +34,7 @@ pipeline:
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
-                    connectorRef: daedduckdnsorg
+                    connectorRef: account.Dockerpi
                     repo: harness-monolithsvc
                     tags:
                       - harness-kashkaval-dev
