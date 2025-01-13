@@ -23,6 +23,9 @@ pipeline:
                   identifier: echo
                   name: echo
                   spec:
+                    connectorRef: Docker_Hub
+                    image: alpine:latest
+                    shell: Sh
                     command: echo hello world
                   timeout: ""
                   type: Run
@@ -36,10 +39,12 @@ pipeline:
                     tags:
                       - harness-kashkaval-dev
                     dockerfile: ./monolithsvc/Dockerfile
-          platform:
-            os: Linux
-            arch: Amd64
-          runtime:
-            type: Docker
-            spec: {}
+          infrastructure:
+            type: KubernetesDirect
+            spec:
+              connectorRef: account.Home_Cluster
+              namespace: harness-delegate-ng
+              automountServiceAccountToken: true
+              nodeSelector: {}
+              os: Linux
         type: CI
