@@ -29,6 +29,8 @@ pipeline:
                     tags:
                       - latest
                     caching: true
+                    dockerfile: ./monolithsvc/Dockerfile
+                    context: ./monolithsvc
           infrastructure:
             type: KubernetesDirect
             spec:
