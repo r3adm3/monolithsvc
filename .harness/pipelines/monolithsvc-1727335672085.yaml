@@ -20,16 +20,6 @@ pipeline:
           execution:
             steps:
               - step:
-                  identifier: echo
-                  name: echo
-                  spec:
-                    connectorRef: Docker_Hub
-                    image: alpine:latest
-                    shell: Sh
-                    command: echo hello world
-                  timeout: ""
-                  type: Run
-              - step:
                   type: BuildAndPushDockerRegistry
                   name: BuildAndPushDockerRegistry_1
                   identifier: BuildAndPushDockerRegistry_1
@@ -37,8 +27,8 @@ pipeline:
                     connectorRef: account.Dockerpi
                     repo: harness-monolithsvc
                     tags:
-                      - harness-kashkaval-dev
-                    dockerfile: ./monolithsvc/Dockerfile
+                      - latest
+                    caching: true
           infrastructure:
             type: KubernetesDirect
             spec:
