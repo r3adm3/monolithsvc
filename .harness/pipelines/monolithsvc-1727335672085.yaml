@@ -25,7 +25,7 @@ pipeline:
                   identifier: BuildAndPushDockerRegistry_1
                   spec:
                     connectorRef: account.Dockerpi
-                    repo: harness-monolithsvc
+                    repo: daed.duckdns.org:50000/harness-monolithsvc
                     tags:
                       - latest
                     caching: true
